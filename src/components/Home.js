@@ -9,6 +9,7 @@ export default function Home() {
 
     return (
         <div>
+            <p>Your favorite food delivered while coding</p>
             <button
                 onClick={routeToPizza}
                 id='order-pizza'

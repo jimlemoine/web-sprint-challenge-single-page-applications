@@ -9,7 +9,6 @@ const App = () => {
     <>
       <nav>
         <h1>Lambda Eats</h1>
-        <p>Your favorite food delivered while coding</p>
         <Link to='/'>Home</Link>
         <Link to='/pizza'>Pizza</Link>
       </nav>
