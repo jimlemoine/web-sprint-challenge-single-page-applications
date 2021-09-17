@@ -11,12 +11,11 @@ import * as yup from 'yup';
 const initialFormValues = {
   name: '',
   size: '',
-  sauce: '',
+  special: '',
   topping1: false,
   topping2: false,
   topping3: false,
   topping4: false,
-  special: '',
 }
 
 const initialFormErrors = {
@@ -35,8 +34,9 @@ const App = () => {
   const [disabled, setDisabled] = useState(initialDisabled)
 
   const postNewOrder = newOrder => {
-    axios.post(`https://reqres.in/api/orders`, newOrder)
+    axios.post('https://reqres.in/api/orders', newOrder)
     .then(res => {
+      console.log(res.data);
       setOrders([res.data, ...orders]);
       setFormValues(initialFormValues);
     }).catch(err => {
@@ -63,12 +63,11 @@ const App = () => {
     const newOrder = {
       name: formValues.name.trim(),
       size: formValues.size,
-      sauce: formValues.sauce,
+      special: formValues.special,
       topping1: formValues.topping1,
       topping2: formValues.topping2,
       topping3: formValues.topping3,
       topping4: formValues.topping4,
-      special: formValues.special
     }
     postNewOrder(newOrder);
   }

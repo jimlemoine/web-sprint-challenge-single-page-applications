@@ -47,34 +47,12 @@ export default function PizzaForm(props) {
                             onChange={onChange}
                         >
                             <option value=''>Select an option</option>
-                            <option value='small'>Small</option>
+                            <option name='small' value='small'>Small</option>
                             <option value='medium'>Medium</option>
                             <option value='large'>Large</option>
                         </select>
                     </label>
                     <div>{errors.size}</div>
-                </div>
-                <div>
-                    <h3>Choice of Sauce</h3>
-                    <label>Original Red
-                        <input
-                            type='radio'
-                            name='sauce'
-                            value='red'
-                            onChange={onChange}
-                            checked={values.sauce === 'red'}
-                        />
-                    </label>
-                    <label>Garlic Ranch
-                        <input
-                            type='radio'
-                            name='sauce'
-                            value='garlic'
-                            onChange={onChange}
-                            checked={values.sauce === 'garlic'}
-                        />
-                    </label>
-                    <div>{errors.sauce}</div>
                 </div>
                 <div>
                     <h3>Add Toppings</h3>
@@ -121,7 +99,7 @@ export default function PizzaForm(props) {
                         onChange={onChange}
                     />
                 </div>
-                <button disabled={disabled} id='order-button'>Submit Order
+                <button disabled={disabled} id='order-button'>Add to Order
                 </button>
             </form>
         </div>

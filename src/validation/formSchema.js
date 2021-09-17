@@ -9,9 +9,6 @@ const schema = yup.object().shape({
     size: yup
         .string()
         .oneOf(['small', 'medium', 'large'], 'You must choose a size'),
-    sauce: yup
-        .string()
-        .oneOf(['red', 'garlic'], 'You must choose a sauce'),
     topping1: yup
         .string(),
     topping2: yup
