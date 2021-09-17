@@ -32,19 +32,19 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
-1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
-1. How would you explain form validation to someone who has never programmed before?
-1. In 1-2 sentences, define end to end testing.
+1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for. ANSWER - useRouteMatch allows you to access the Match properties of the event.target object, the key example from this week was the url path to the current webpage which allows you to shorten the path to a variable such as 'url' and reduce the risk of mistyping the path especially for longer url lengths.
+1. How would you explain form validation to someone who has never programmed before? ANSWER - form validation is something we do as web developers to make sure that when someone completes a form they input the correct information, we commonly come across this as users when creating passwords that must be a certain minimum length and contain certain characters. We can implement those requirements using Yup.
+1. In 1-2 sentences, define end to end testing. ANSWER - End-to-end testing is when we want to actually simulate the interaction of a user with the webpage so we create a variety of tests using the Arrange, Act, Assert methodology to automate the testing to verify that when someone interacts with the page by typing something in a form or clicking a button or checking a box we actually get the desired outcome on the page.
 
 ## Instructions
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
+- [X] Create a forked copy of this project
 - [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [X] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [X] Create a new branch: `git checkout -b <firstName-lastName>`
+- [X] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
 - [ ] Push commits: `git push origin <firstName-lastName>`
 
 ### Task 2: Project Requirements
