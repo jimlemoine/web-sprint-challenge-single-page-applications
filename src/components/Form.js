@@ -5,7 +5,8 @@ export default function PizzaForm(props) {
         values,
         submit,
         change,
-        disabled
+        disabled,
+        errors
     } = props;
 
     const onSubmit = evt => {
@@ -28,17 +29,19 @@ export default function PizzaForm(props) {
                     <label>Name
                     <input 
                         type='text'
-                        name='name-input'
+                        name='name'
+                        id='name-input'
                         value={values.name}
                         onChange={onChange}
                     />
                     </label>
+                    <div>{errors.name}</div>
                 </div>
                 <div>
                     <h3>Choice of Size</h3>
                     <label>Size
                         <select
-                            name='size-dropdown'
+                            name='size'
                             id='size-dropdown'
                             value={values.size}
                             onChange={onChange}
@@ -49,6 +52,7 @@ export default function PizzaForm(props) {
                             <option value='large'>Large</option>
                         </select>
                     </label>
+                    <div>{errors.size}</div>
                 </div>
                 <div>
                     <h3>Choice of Sauce</h3>
@@ -70,6 +74,7 @@ export default function PizzaForm(props) {
                             checked={values.sauce === 'garlic'}
                         />
                     </label>
+                    <div>{errors.sauce}</div>
                 </div>
                 <div>
                     <h3>Add Toppings</h3>
